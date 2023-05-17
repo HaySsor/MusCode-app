@@ -25,6 +25,7 @@ export default {
         id: Math.floor(Math.random() * 100),
       };
       context.emit('newTask', newTaskObj);
+      newTaskText.value =''
     };
 
     return {newTaskText, addTaskToList};

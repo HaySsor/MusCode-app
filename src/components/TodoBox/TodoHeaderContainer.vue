@@ -29,6 +29,9 @@ export default {
   justify-content: space-between;
   color: #333;
   font-size: 1.6rem;
+  &-title{
+    font-weight: 400;
+  }
   &-done {
     font-weight: 400;
   }

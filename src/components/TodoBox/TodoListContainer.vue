@@ -21,12 +21,12 @@ export default {
   setup() {
     const tasksList = ref([]);
 
-    const addNewTaskToList = (value) => {
-      tasksList.value.push(value);
+    const addNewTaskToList = (newTaskObject) => {
+      tasksList.value.push(newTaskObject);
     };
 
-    const handleCheckTask = (object) => {
-      const {done, id} = object;
+    const handleCheckTask = (newTaskObject) => {
+      const {done, id} = newTaskObject;
       const newTaskList = tasksList.value.map((task) => {
         return task.id === id ? {...task, done: done} : task;
       });

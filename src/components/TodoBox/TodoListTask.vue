@@ -60,12 +60,14 @@ export default {
     content: '';
     position: absolute;
     display: flex;
-    top: 2px;
-    left: 2px;
-    width: 10px;
+    top: 1px;
+    left: 1px;
+    width: 12px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    -webkit-mask-image: url('../../../public/photos/check.svg');
     background-color: #862583;
+    mask-image: url(icon.svg);
   }
   input[type='checkbox']:disabled:before {
     border: 2px solid #333;
