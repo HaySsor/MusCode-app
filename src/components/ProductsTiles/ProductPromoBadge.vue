@@ -13,11 +13,9 @@ export default {
     promotionalPrice: Number,
   },
   setup(props) {
-    const calculatePromo = computed(() => {
-      return Math.floor(
-        ((props.price - props.promotionalPrice) / props.price) * 100
-      );
-    });
+    const calculatePromo = computed(() =>
+      Math.floor(((props.price - props.promotionalPrice) / props.price) * 100)
+    );
     return {calculatePromo};
   },
 };

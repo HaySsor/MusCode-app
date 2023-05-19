@@ -35,8 +35,8 @@ export default {
 <style lang="scss" scoped>
 .input-box {
   position: relative;
-  border-bottom: 1px solid #b2b2b2;
-  border-bottom: 1px solid #b2b2b2;
+  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   padding: 10px;
 
   .plus {

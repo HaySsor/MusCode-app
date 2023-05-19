@@ -18,6 +18,7 @@ export default {
     const doneTodoTasks = computed(() => {
       return props.tasksList.filter((task) => task.done === true).length;
     });
+
     return {doneTodoTasks};
   },
 };
@@ -27,9 +28,9 @@ export default {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  color: #333;
+  color: $title-color;
   font-size: 1.6rem;
-  &-title{
+  &-title {
     font-weight: 400;
   }
   &-done {

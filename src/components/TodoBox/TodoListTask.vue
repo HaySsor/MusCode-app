@@ -19,7 +19,7 @@ export default {
     const doneTask = ref(false);
 
     watch(doneTask, (currentValue) => {
-      context.emit('ChangeCheckTask', {done: currentValue, id: props.task.id});
+      context.emit('CheckChangeTask', {done: currentValue, id: props.task.id});
     });
 
     return {doneTask};
@@ -31,7 +31,7 @@ export default {
   display: flex;
   gap: 5px;
   align-items: center;
-  border-bottom: 1px solid #b2b2b2;
+  border-bottom: 1px solid $border-color;
   width: 100%;
   padding: 13px 10px;
 
@@ -52,7 +52,7 @@ export default {
     height: 18px;
     top: -2px;
     left: -2px;
-    border: 1px solid gray;
+    border: 1px solid $border-color;
     border-radius: 50%;
     background-color: white;
   }
@@ -66,16 +66,8 @@ export default {
     aspect-ratio: 1/1;
     border-radius: 50%;
     -webkit-mask-image: url('../../../public/photos/check.svg');
-    background-color: #862583;
+    background-color: $accent-color;
     mask-image: url(icon.svg);
-  }
-  input[type='checkbox']:disabled:before {
-    border: 2px solid #333;
-    background-color: rgb(128, 128, 128);
-    border-radius: 5px;
-  }
-  input[type='checkbox']:disabled ~ label {
-    color: rgba(128, 128, 128, 0.427);
   }
 }
 </style>

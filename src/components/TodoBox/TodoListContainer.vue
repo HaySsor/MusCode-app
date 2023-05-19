@@ -4,7 +4,7 @@
     <div class="todo-list-container__tasks">
       <TodoListUlList
         :tasksList="tasksList"
-        @ChangeCheckTask="handleCheckTask" />
+        @CheckChangeTask="handleCheckTask" />
       <TodoAddNewTaskInput @newTask="addNewTaskToList" />
     </div>
   </div>
@@ -49,7 +49,7 @@ export default {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    color: #333;
+    color: $title-color;
     font-size: 1.6rem;
     &-done {
       font-weight: 400;

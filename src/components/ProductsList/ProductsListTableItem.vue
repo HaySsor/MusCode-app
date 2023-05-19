@@ -27,12 +27,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 td {
-  border-bottom: 1px solid #b2b2b2;
+  border-bottom: 1px solid $border-color;
   padding: 6px 6px 6px 0;
   font-weight: lighter;
 }
 tr:hover {
-  background-color: #f5f8fa;
+  background-color: $table-hover-color;
 }
 .id {
   padding-left: 10px;

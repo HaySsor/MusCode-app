@@ -1,5 +1,5 @@
 <template>
-  <div class="tile">
+  <div class="tile" @click="handleOpenModal">
     <ProductTileHeader :name="product.name" />
     <ProductTileImage :img="product.img" :name="product.name" />
     <ProductTilePrice
@@ -13,11 +13,13 @@
   </div>
 </template>
 <script>
+import {computed} from 'vue';
+
 import ProductTileHeader from './ProductTileHeader.vue';
 import ProductTileImage from './ProductTileImage.vue';
 import ProductTilePrice from './ProductTilePrice.vue';
 import ProductPromoBadge from './ProductPromoBadge.vue';
-import {computed} from 'vue';
+
 export default {
   name: 'ProductTile',
   components: {
@@ -28,16 +30,16 @@ export default {
   },
   props: {
     product: Object,
+    openModal: Function,
   },
   setup(props) {
-    const cheekIfIsPromo = computed(() => {
-      if (props.product.promotionalPrice === 0) {
-        return false;
-      }
-      return true;
-    });
+    const cheekIfIsPromo = computed(() =>  props.product.promotionalPrice !== 0 );
 
-    return {cheekIfIsPromo};
+    const handleOpenModal = () => {
+      props.openModal(props.product.id);
+    };
+
+    return {handleOpenModal, cheekIfIsPromo};
   },
 };
 </script>
@@ -50,5 +52,6 @@ export default {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.284);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 </style>

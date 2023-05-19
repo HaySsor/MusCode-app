@@ -1,7 +1,9 @@
 <template>
   <div class="price-box">
     <p class="promotional-price">{{ promotionCheek }} {{ currency }}</p>
-    <p class="price" v-if="promotionalPrice !== 0">{{ price }} {{ currency }}</p>
+    <p v-if="promotionalPrice !== 0" class="price">
+      {{ price }} {{ currency }}
+    </p>
   </div>
 </template>
 <script>
@@ -14,11 +16,12 @@ export default {
     currency: String,
   },
   setup(props) {
+    console.log(props.price, props.promotionalPrice);
+
     const promotionCheek = computed(() => {
-      if (props.promotionalPrice === 0) {
-        return props.price;
-      }
-      return props.promotionalPrice;
+      return props.promotionalPrice === 0
+        ? props.price
+        : props.promotionalPrice;
     });
 
     return {promotionCheek};
@@ -38,7 +41,7 @@ export default {
     color: #862583;
     font-size: 18px;
   }
-  .price{
+  .price {
     font-size: 14px;
     text-decoration: line-through;
   }

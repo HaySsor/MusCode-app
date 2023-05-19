@@ -13,7 +13,7 @@ export default {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  color: #333;
+  color: $title-color;
   font-size: 1.6rem;
 
   &-title{

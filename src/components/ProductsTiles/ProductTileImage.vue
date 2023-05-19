@@ -9,9 +9,6 @@ export default {
     props:{
         img : String,
         name: String,
-    },
-    setup(){
-
     }
 }
 </script>
@@ -26,7 +23,6 @@ export default {
         img{
             width: 100%;
             object-fit: contain;
-            
         }
     }
 </style>

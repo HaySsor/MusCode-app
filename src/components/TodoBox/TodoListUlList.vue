@@ -4,7 +4,7 @@
       v-for="task in tasksList"
       :key="task.id"
       :task="task"
-      @ChangeCheckTask="handleCheckboxChangeToContainer" />
+      @CheckChangeTask="handleCheckboxChangeToContainer" />
   </ul>
   <div class="empty-list" v-else>
     <h3>Twoja lista jest pusta</h3>
@@ -21,7 +21,7 @@ export default {
   },
   setup(_, context) {
     const handleCheckboxChangeToContainer = (object) => {
-      context.emit('ChangeCheckTask', object);
+      context.emit('CheckChangeTask', object);
     };
 
     return {handleCheckboxChangeToContainer};
@@ -36,7 +36,7 @@ export default {
   height: 220px;
 }
 
-.empty-list{
+.empty-list {
   display: flex;
   justify-content: center;
   padding-top: 40px;
