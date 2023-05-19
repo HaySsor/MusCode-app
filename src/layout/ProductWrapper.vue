@@ -1,4 +1,5 @@
 <template>
+  <h1>Muscode App</h1>
   <section class="app-container">
     <TodoListContainer class="todo-list" />
     <ProductsListContainer
@@ -12,7 +13,7 @@
   </section>
 </template>
 <script>
-import TodoListContainer from '../components/TodoBox/TodoListContainer.vue'
+import TodoListContainer from '../components/TodoBox/TodoListContainer.vue';
 import ProductsListContainer from '../components/ProductsList/ProductsListContainer.vue';
 import ProductsTilesBox from '../components/ProductsTiles/ProductsTilesBox.vue';
 import Image1 from '/photos/img1.png';
@@ -71,6 +72,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+h1 {
+  text-align: center;
+  padding: 40px;
+  color: $title-color;
+  font-weight: normal;
+}
 .app-container {
   display: grid;
   gap: 15px;

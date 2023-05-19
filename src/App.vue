@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ProductWrapper from './layout/ProductWrapper.vue'
+import ProductWrapper from './layout/ProductWrapper.vue';
 
 export default {
   components: {
