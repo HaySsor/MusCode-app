@@ -20,9 +20,9 @@ export default {
   components: {TodoListUlList, TodoAddNewTaskInput, TodoHeaderContainer},
   setup() {
     const tasksList = ref([
-      {text: 'Lorem ipsum dolor sit amet.', done: false, id: 93},
-      {text: 'consectetur adipisicing elit. Quasi, ipsa', done: false, id: 93},
-      {text: 'Quasi, ipsa optio molestias voluptas', done: false, id: 93},
+      {text: 'Lorem ipsum dolor sit amet.', done: false, id: 1},
+      {text: 'consectetur adipisicing elit. Quasi, ipsa', done: false, id: 2},
+      {text: 'Quasi, ipsa optio molestias voluptas', done: false, id: 3},
     ]);
 
     const addNewTaskToList = (newTaskObject) => {
