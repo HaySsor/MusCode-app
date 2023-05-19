@@ -19,7 +19,11 @@ export default {
   name: 'TodoListContainer',
   components: {TodoListUlList, TodoAddNewTaskInput, TodoHeaderContainer},
   setup() {
-    const tasksList = ref([]);
+    const tasksList = ref([
+      {text: 'Lorem ipsum dolor sit amet.', done: true, id: 93},
+      {text: 'consectetur adipisicing elit. Quasi, ipsa', done: true, id: 93},
+      {text: 'Quasi, ipsa optio molestias voluptas', done: true, id: 93},
+    ]);
 
     const addNewTaskToList = (newTaskObject) => {
       tasksList.value.push(newTaskObject);
@@ -30,6 +34,8 @@ export default {
       const newTaskList = tasksList.value.map((task) => {
         return task.id === id ? {...task, done: done} : task;
       });
+
+      console.log(newTaskList);
       tasksList.value = newTaskList;
     };
 
