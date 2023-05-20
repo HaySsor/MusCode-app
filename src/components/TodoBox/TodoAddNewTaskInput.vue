@@ -45,6 +45,7 @@ export default {
     left: 12px;
     font-size: 2rem;
     font-weight: lighter;
+    cursor: pointer;
   }
   .add-new-task {
     margin-left: 30px;
