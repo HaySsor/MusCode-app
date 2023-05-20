@@ -89,7 +89,7 @@ h1 {
     'todo productList productList'
     'productsBox productsBox productsBox';
   max-width: 1180px;
-
+  margin-bottom: 50px;
   .todo-list {
     grid-area: todo;
   }
