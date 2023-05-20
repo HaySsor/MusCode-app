@@ -37,7 +37,6 @@ export default {
     };
 
     const chosenProduct = (id) => {
-      console.log(props.products, id);
       openProduct.value = props.products.find((item) => item.id === id);
     };
 

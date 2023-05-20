@@ -18,7 +18,6 @@ export default {
 
   .title {
     font-weight: normal;
-    
   }
 }
 </style>

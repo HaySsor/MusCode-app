@@ -13,13 +13,15 @@
   </section>
 </template>
 <script>
+import {ref} from 'vue';
+
 import TodoListContainer from '../components/TodoBox/TodoListContainer.vue';
 import ProductsListContainer from '../components/ProductsList/ProductsListContainer.vue';
 import ProductsTilesBox from '../components/ProductsTiles/ProductsTilesBox.vue';
+
 import Image1 from '/photos/img1.png';
 import Image2 from '/photos/img2.png';
 import Image3 from '/photos/img3.png';
-import {ref} from 'vue';
 
 export default {
   name: 'ProductWrapper',
@@ -58,7 +60,7 @@ export default {
         if (product.id === id) {
           return {...product, name, price, promotionalPrice, currency};
         }
-        return {...product};
+        return product;
       });
     };
 

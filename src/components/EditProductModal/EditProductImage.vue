@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="img-box">
-      <img :src="img" alt="" />
+      <img :src="img" :alt="alt" />
     </div>
   </div>
 </template>
@@ -10,6 +10,7 @@ export default {
   name: 'EditProductImage',
   props: {
     img: String,
+    alt: String,
   },
 };
 </script>

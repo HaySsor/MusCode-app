@@ -30,9 +30,7 @@ export default {
   justify-content: space-between;
   color: $title-color;
   font-size: 1.6rem;
-  &-title {
-    font-weight: 400;
-  }
+  &-title,
   &-done {
     font-weight: 400;
   }

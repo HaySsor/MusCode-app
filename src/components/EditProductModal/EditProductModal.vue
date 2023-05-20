@@ -3,7 +3,7 @@
     <div class="shadow" @click="closeModal"></div>
     <div class="modal-body">
       <EditProductModalHeader :name="openProduct.name" />
-      <EditProductImage :img="openProduct.img" />
+      <EditProductImage :img="openProduct.img" :alt="openProduct.name" />
       <EditProductForm
         :openProduct="openProduct"
         :closeModal="closeModal"

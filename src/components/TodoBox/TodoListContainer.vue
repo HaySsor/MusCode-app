@@ -45,11 +45,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .todo-list-container {
-  width: 350px;
-  aspect-ratio: 1;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.284);
+  @include container;
 
   &__top {
     padding: 20px;

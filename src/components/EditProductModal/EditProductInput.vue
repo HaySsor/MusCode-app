@@ -1,9 +1,9 @@
 <template>
   <div class="input-box">
     <label>{{ labelText }}</label>
-    <span v-if="id === 3 && priceError" class="error-span"
-      >cena promocyjna musi być niższa niż standardowa</span
-    >
+    <span v-if="id === 3 && priceError" class="error-span">
+      cena promocyjna musi być niższa niż standardowa
+    </span>
     <input
       :value="modelValue === 0 ? '' : modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
@@ -27,10 +27,7 @@ export default {
     priceError: Boolean,
   },
   setup(props) {
-    const errorClass = computed(() => {
-      console.log(props.priceError);
-      return props.priceError ? 'error' : '';
-    });
+    const errorClass = computed(() => (props.priceError ? 'error' : ''));
     return {errorClass};
   },
 };

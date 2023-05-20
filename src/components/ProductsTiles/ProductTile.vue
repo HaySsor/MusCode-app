@@ -33,7 +33,7 @@ export default {
     openModal: Function,
   },
   setup(props) {
-    const cheekIfIsPromo = computed(() =>  props.product.promotionalPrice !== 0 );
+    const cheekIfIsPromo = computed(() => props.product.promotionalPrice !== 0);
 
     const handleOpenModal = () => {
       props.openModal(props.product.id);
@@ -45,11 +45,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .tile {
-  width: 350px;
-  aspect-ratio: 1;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.284);
+  @include container;
   position: relative;
   overflow: hidden;
   cursor: pointer;

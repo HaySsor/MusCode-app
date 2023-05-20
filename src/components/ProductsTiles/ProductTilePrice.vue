@@ -16,8 +16,6 @@ export default {
     currency: String,
   },
   setup(props) {
-    console.log(props.price, props.promotionalPrice);
-
     const promotionCheek = computed(() => {
       return props.promotionalPrice === 0
         ? props.price

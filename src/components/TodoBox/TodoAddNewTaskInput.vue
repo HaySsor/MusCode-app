@@ -36,7 +36,6 @@ export default {
 .input-box {
   position: relative;
   border-bottom: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
   padding: 10px;
 
   .plus {
